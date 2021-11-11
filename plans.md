@@ -31,7 +31,7 @@ P = Solar Irradiance
 
 P = c * PI, where P = { V, I } and c is conversion rate
 
-P = V vecto
+P = V  * I vector
 
 V is constant
 
