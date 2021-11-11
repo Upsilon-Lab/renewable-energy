@@ -50,7 +50,7 @@ P(t) = { hourly data for a few months }
 Run the data through ML to get trends etc. (Maybe predict)
 
 validate our equipment on the efficiency C = P/P_I
-* Need to decide data to use for P_I: ideal data (no cloud cover) or average P_I(t) based on date/time-of-day
+* Need to decide data to use for P_I: ideal data (no cloud cover) or average P_I(t) based on date/time-of-day (averaged over many years - climatological mean)
 * Can take the average or rms of C(t)
 * Analyze the trend/curve of power and conversion rate (daily variation)
 
