@@ -15,6 +15,7 @@
 * Aron 
 * Brandon
 * David
+* Fiona
 * Jiayang
 * Justin
 * Lucy
