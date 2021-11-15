@@ -2,19 +2,17 @@
 
 ## Teams
 
-### Arduino 
-* Adam
+### Arduino - Adam
 * Adison
 * Amolak
 * David
 * Leo 
 * Tracy
 
-### Python
+### Python - David
 * Adam
 * Aron 
 * Brandon
-* David
 * Fiona
 * Jiayang
 * Justin
