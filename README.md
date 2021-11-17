@@ -10,7 +10,6 @@ While a system of this size is a drop in the bucket for LA’s energy supply or 
 
 Here are some relevant links that we will be referring to in the due course of our project –
 
-* https://pypi.org/project/solarpy/
-* https://krajit.github.io/sympy/vectorFields/vectorFields.html
-* https://github.com/jblance/mpp-solar
-* https://pypi.org/project/pvlib/
+* https://github.com/aqreed/solarpy
+* https://github.com/pvlib/pvlib-python
+* https://www.browndoggadgets.com/products/dual-axis-smart-solar-tracker
