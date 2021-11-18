@@ -9,6 +9,7 @@
 * David
 * Leo 
 * Tracy
+* Anthony
 
 ### Python - David
 * Adam
