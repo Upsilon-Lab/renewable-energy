@@ -19,7 +19,7 @@
 * Jiayang
 * Justin
 * Lucy
-* Srinut
+* Srinath Saikrishnan
 * Tracy
 
 ## Arduino Supplies
