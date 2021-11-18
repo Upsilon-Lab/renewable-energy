@@ -15,7 +15,7 @@
 * Aron 
 * Brandon
 * Fiona
-* Jiayang
+* Jiayang Chen
 * Justin
 * Lucy
 * Srinut
