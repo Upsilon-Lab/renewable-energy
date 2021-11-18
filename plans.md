@@ -3,7 +3,7 @@
 ## Teams
 
 ### Arduino - Adam
-* Adison
+* Adison Guo
 * Amolak Virk
 * Aria
 * David
