@@ -3,7 +3,7 @@
 ## Teams
 
 ### Arduino - Adam
-* Adison Guo
+* Adison Guo lastname
 * Amolak
 * Aria
 * David
