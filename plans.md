@@ -16,7 +16,7 @@
 * Aron 
 * Brandon
 * Fiona
-* Jiayang
+* Jiayang Chen
 * Justin
 * Lucy Kaff
 * Srinath Saikrishnan
