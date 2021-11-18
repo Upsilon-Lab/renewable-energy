@@ -17,7 +17,7 @@
 * Fiona
 * Jiayang
 * Justin
-* Lucy
+* Lucy Kaff
 * Srinut
 * Tracy
 
