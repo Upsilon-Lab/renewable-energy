@@ -5,6 +5,7 @@
 ### Arduino - Adam
 * Adison
 * Amolak
+* Aria
 * David
 * Leo 
 * Tracy
