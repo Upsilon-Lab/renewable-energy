@@ -51,7 +51,7 @@
     : doesnt actually work for me for some reason (Adison) windows users use CLI
 
 ### github CLI pull requests
-####Windows users install CLI with tool, ie. scoop
+#### Windows users install CLI with tool, ie. scoop
     # Installs scoop
     iwr -useb get.scoop.sh | iex
 
@@ -76,14 +76,14 @@
 ### To mark a pull request as a draft, use the --draft flag.
     gh pr create --draft
 
-###To add a labels or milestones to the new pull request, use the --label and --milestone flags.
+### To add a labels or milestones to the new pull request, use the --label and --milestone flags.
     gh pr create --label "bug,help wanted" --milestone octocat-milestone
 
-###To add the new pull request to a specific project, use the --project flag.
+### To add the new pull request to a specific project, use the --project flag.
     gh pr create --project octocat-project
 
-###To assign an individual or team as reviewers, use the --reviewer flag.
+### To assign an individual or team as reviewers, use the --reviewer flag.
     gh pr create --reviewer monalisa,hubot  --reviewer myorg/team-name
 
-###To create the pull request in your default web browser, use the --web flag.
+### To create the pull request in your default web browser, use the --web flag.
     gh pr create --web
