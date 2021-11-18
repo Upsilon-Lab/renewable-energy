@@ -4,7 +4,7 @@
 
 ### Arduino - Adam
 * Adison
-* Amolak
+* Amolak Virk
 * Aria
 * David
 * Leo 
