@@ -4,6 +4,7 @@
 
 ### Arduino - Adam
 * Adison
+* Adison Guo
 * Amolak
 * Aria
 * David
