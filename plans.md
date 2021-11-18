@@ -5,11 +5,11 @@
 ### Arduino - Adam
 * Adison Guo
 * Amolak Virk
-* Aria
-* David
+* Aria Holmes
+* David Gotler
 * Leo 
-* Tracy
-* Anthony
+* Tracy Zhao
+* Anthony Guerrera
 
 ### Python - David
 * Adam
@@ -20,7 +20,7 @@
 * Justin
 * Lucy Kaff
 * Srinath Saikrishnan
-* Tracy
+* Tracy Zhao
 
 ## Arduino Supplies
 
