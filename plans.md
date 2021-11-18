@@ -18,7 +18,7 @@
 * Fiona
 * Jiayang
 * Justin
-* Lucy
+* Lucy Kaff
 * Srinath Saikrishnan
 * Tracy
 
