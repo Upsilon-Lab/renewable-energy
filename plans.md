@@ -9,6 +9,7 @@
 * David
 * Leo 
 * Tracy
+* Anthony
 
 ### Python - David
 * Adam
@@ -18,7 +19,7 @@
 * Jiayang
 * Justin
 * Lucy Kaff
-* Srinut
+* Srinath Saikrishnan
 * Tracy
 
 ## Arduino Supplies
