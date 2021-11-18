@@ -8,7 +8,7 @@
 * Aria
 * David Gotler
 * Leo 
-* Tracy
+* Tracy Zhao
 
 ### Python - David
 * Adam
@@ -19,7 +19,7 @@
 * Justin
 * Lucy
 * Srinut
-* Tracy
+* Tracy Zhao
 
 ## Arduino Supplies
 
