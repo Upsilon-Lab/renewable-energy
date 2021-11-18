@@ -4,11 +4,12 @@
 
 ### Arduino - Adam
 * Adison Guo
-* Amolak
+* Amolak Virk
 * Aria
 * David
 * Leo 
 * Tracy
+* Anthony
 
 ### Python - David
 * Adam
@@ -17,8 +18,8 @@
 * Fiona
 * Jiayang
 * Justin
-* Lucy
-* Srinut
+* Lucy Kaff
+* Srinath Saikrishnan
 * Tracy
 
 ## Arduino Supplies
