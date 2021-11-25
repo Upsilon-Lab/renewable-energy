@@ -43,13 +43,6 @@
     git commit -m "Removed .idea files"
     git push origin <branch>
 
-### hub pull requests
-    hub --help pull-request  # do this first
-                             # practice on a test repo
-    hub pull-request         # assumes origin on current_branch
-    git pull-request         # if you are using the git alias
-    : doesnt actually work for me for some reason (Adison) windows users use CLI
-
 ### github CLI pull requests
 #### Windows users install CLI with tool, ie. scoop
     # Installs scoop
