@@ -12,9 +12,13 @@
     git add file.txt or git add --all       ; add files you want to commit            
     
     git commit -m "commit name subject"
+
+    git pull upstream    ; checks for differences before pushing
+                         ; if there are differences use the merge section to update
+
+    git reset HEAD          ; if you dont want to push commits, reset clears it
     
     git push or git push origin
-
 ### checking and changing origin and upstream
     git remote -v
 
@@ -50,7 +54,7 @@
 
     # Installs CLI with scoop
     scoop bucket add github-gh https://github.com/cli/scoop-gh.git
-    scoop install gh
+    scoop install gh        ;installs it
 #
     gh pr create        # create pull request
     # when choosing base and head
