@@ -28,7 +28,7 @@
     
     git remote add origin https://github.com/User/renewable-energy
     
-    git remote add upstream https://g*ithub.com/Upsilon-Lab/renewable-energy
+    git remote add upstream https://github.com/Upsilon-Lab/renewable-energy
     
     git fetch upstream                  ; fetch data
     
