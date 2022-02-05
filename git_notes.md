@@ -26,7 +26,7 @@
     
     git remote remove upstream          ; remove if want to change
     
-    git remote add origin https://github.com/User/renewable-energy
+    git remote add origin https://github.com/Upsilon-Renewable-Energy/renewable-energy
     
     git remote add upstream https://github.com/Upsilon-Lab/renewable-energy
     
