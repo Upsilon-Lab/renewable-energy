@@ -1,5 +1,5 @@
 #include <Servo.h>
-#include <math.h>
+#include <EEPROM.h>
 Servo botServo; // Servo that is at the base
 Servo topServo; // Servo at the the top 
 
@@ -7,8 +7,12 @@ void setup() {
   botServo.attach(0);
   topServo.attach(1);
 }
-int theta = 45; // bottom angle
-int phi = 45;   // Top angle
+// bottom angle
+float theta = EEPROM.read(0);
+// Top angle
+float phi = EEPROM.read(1);
+
+
 
 // Photoresistors
 float pin0 = 0; // Top left
@@ -20,13 +24,16 @@ float inc = 0;
 const int threshold = 1500;
 float diff = 0;
 
+int run_ms = 80;
+long prev_ms = 0;
 void loop() {
+  if (millis()-prev_ms >= run_ms){
+
+  //top to bottom
   pin0 = ohmRead(0);
   pin1 = ohmRead(1);
   pin2 = ohmRead(2);
   pin3 = ohmRead(3);
-
-  //top to bottom
 
   diff = (pin0 + pin1) - (pin2 + pin3);
   inc = calcInc(diff);
@@ -46,13 +53,12 @@ void loop() {
     topServo.write(theta);
   }
   
-  
+  //side to side
   pin0 = ohmRead(0);
   pin1 = ohmRead(1);
   pin2 = ohmRead(2);
   pin3 = ohmRead(3);
-  //side to side
-
+  
   diff = (pin0 + pin2) - (pin1 + pin3);
   inc = calcInc(diff);
   
@@ -65,12 +71,16 @@ void loop() {
     botServo.write(phi);
   } else {
     phi = phi - inc;
-      if (phi < 0){
+    if (phi < 0){
       phi = 0;
     }
     botServo.write(phi);
-  }  
-  delay(90);
+  }
+  EEPROM.put(0, (int)theta);
+  EEPROM.put(1, (int)phi);
+  
+  prev_ms = millis();
+  }
 }
 
 const int   Vin = 5;
@@ -95,7 +105,7 @@ float ohmRead(int pin){
 }
 
 const int minInc = 0.5;
-const int maxInc = 2;
+const int maxInc = 3;
 float calcInc(float diff){
   inc = abs(diff)/(threshold);
   if (inc > maxInc){
