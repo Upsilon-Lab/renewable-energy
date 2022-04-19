@@ -65,7 +65,7 @@ plt.savefig(fig_dir+'solar_irradience_power_{:.2f}eff.png'.format(eff*100))
 
 fig,ax = plt.subplots(figsize=(6,4))
 P_diff.plot(ax=ax).legend(loc='upper right')
-ax.set_title('Power Gain From Tracking')
+ax.set_title('Power Gain From Tracking {:.2f}% Efficiency'.format(eff*100))
 ax.set_xlabel('$t\ [minutes]$')
 ax.set_ylabel('$\Delta P\ [W]$')
 
