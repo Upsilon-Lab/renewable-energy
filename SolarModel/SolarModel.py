@@ -4,12 +4,14 @@ import solarpy
 import datetime
 import matplotlib.pyplot as plt
 
+# Direction normal to the plane in North,East,Down coords
 vnorm = np.array([0, 0, -1])
-# North, East, Down
+
+# Height relative to sea level = 0
 h = 114
-# altitude 0 = sea level
-lat = 34
+
 # latitude of UCLA
+lat = 34
 
 # initialize day
 today = pd.to_datetime('today').date()
