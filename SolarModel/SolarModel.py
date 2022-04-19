@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import solarpy
 import datetime
 import matplotlib.pyplot as plt
@@ -11,15 +12,12 @@ lat = 34
 # latitude of UCLA
 
 # initialize day
-date = datetime.datetime(2020, 4, 11, 0, 0)
+today = pd.to_datetime('today').date()
+day = pd.date_range(today,periods=24*60,freq='min')
 
-# adding minutes
-dateArray = np.array([date + datetime.timedelta(minutes=i) for i in range(1440)])
-
-G = np.array([solarpy.irradiance_on_plane(vnorm, h, dateArray[i], lat) for i in range(1440)])
-# vnorm, h, date, lat
+# Get irradiance for each minute, m in day
+G = pd.DataFrame({'G':[solarpy.irradiance_on_plane(vnorm, h, m, lat) for m in day]},index=day)
 
 # plotting
-t = np.array([i for i in range(1440)])
-plt.plot(t, G)
+G.plot()
 plt.show()
