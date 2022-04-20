@@ -1,3 +1,5 @@
+from operator import index
+from time import time
 from traceback import print_tb
 import numpy as np
 import pandas as pd
@@ -19,14 +21,16 @@ h = 114
 lat = 34
 
 # initialize day
-today = pd.to_datetime('today').date()
-day = pd.date_range(today,periods=24*60,freq='min')
+spring = [np.datetime64('2022-03-01'),np.datetime64('2022-06-01')]
+time_MAM = pd.date_range(spring[0],spring[1],freq='min')
 
 # Get irradiance for each minute, m in day for 5 fixed directions
-G = pd.DataFrame({direction:[sp.irradiance_on_plane(v, h, m, lat) for m in day] for v,direction in zip(vnorm_arr,direction_labels)},index=day)
+G = pd.DataFrame({direction:[sp.irradiance_on_plane(v, h, m, lat) for m in time_MAM] for v,direction in zip(vnorm_arr,direction_labels)},index=time_MAM)
 # Get beam irradiance as a proxy for tracked
-G[direction_labels[-1]]=[sp.beam_irradiance(h,m,lat)for m in day]
-G = G[G.mean(axis=1)!=0]
+G[direction_labels[-1]]=[sp.beam_irradiance(h,m,lat)for m in time_MAM]
+G = G[G.mean(axis=1)>0]
+# Average for a daily solar irradiance
+G = G.groupby(G.index.time).mean()
 
 # Calculate power output from solar panel
 # ---------------------------------------
@@ -49,17 +53,19 @@ print(P_diff.mean())
 # plotting
 # --------
 fig_dir = 'figures/'
-
+idx = G.index
 # Plot solar irradiance and power output of the solar panel
 fig,axs = plt.subplots(1,2,figsize=(10,4))
 G.plot(ax=axs[0]).legend(loc='upper right')
-axs[0].set_title('Daily Solar Irradiance')
+axs[0].set_title('Average Daily Solar Irradiance for Spring(MAM)')
 axs[0].set_xlabel('$t\ [minutes]$')
 axs[0].set_ylabel('$G\ [W/m^2]$')
+axs[0].set_xlim(idx.min(),idx.max())
 P.plot(ax=axs[1]).legend(loc='upper right')
 axs[1].set_title('Solar Panel {:.2f}% Efficiency'.format(eff*100))
 axs[1].set_xlabel('$t\ [minutes]$')
 axs[1].set_ylabel('$P\ [W]$')
+axs[1].set_xlim(idx.min(),idx.max())
 
 plt.savefig(fig_dir+'solar_irradience_power_{:.2f}eff.png'.format(eff*100))
 
@@ -68,5 +74,6 @@ P_diff.plot(ax=ax).legend(loc='upper right')
 ax.set_title('Power Gain From Tracking {:.2f}% Efficiency'.format(eff*100))
 ax.set_xlabel('$t\ [minutes]$')
 ax.set_ylabel('$\Delta P\ [W]$')
+ax.set_xlim(idx.min(),idx.max())
 
 plt.savefig(fig_dir+'power_gain_{:.2f}eff.png'.format(eff*100))
